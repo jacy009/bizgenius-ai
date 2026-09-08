@@ -6,9 +6,7 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-app.get("/", (req, res) => {
-  res.send("BizGenius AI server is running!");
-});
+app.use(express.static(__dirname));
 
 // Health check for load balancers / uptime monitoring
 app.get("/health", (req, res) => {
