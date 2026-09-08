@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>BizGenius AI - Smart Business Assistant</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>🤖 BizGenius AI</h1>
+        <p>Your smart AI assistant for growing your business</p>
+    </header>
+
+    <main>
+
+        <section class="hero">
+            <h2>Grow Your Business Smarter 🚀</h2>
+
+            <p>
+                Create professional marketing content for your business
+                in seconds.
+            </p>
+        </section>
+
+
+        <div class="card">
+
+            <h2>✨ Create Marketing Content</h2>
+
+            <label for="business">
+                What does your business sell?
+            </label>
+
+            <input
+                type="text"
+                id="business"
+                placeholder="e.g. Ladies handbags"
+            >
+
+
+            <label for="contentType">
+                What do you want to create?
+            </label>
+
+            <select id="contentType">
+
+                <option value="advertisement">
+                    📢 Advertisement
+                </option>
+
+                <option value="whatsapp">
+                    💬 WhatsApp Message
+                </option>
+
+                <option value="social">
+                    📱 Social Media Caption
+                </option>
+
+                <option value="description">
+                    📝 Product Description
+                </option>
+
+            </select>
+
+
+            <button onclick="generateContent()">
+                ✨ Generate Content
+            </button>
+
+
+            <div id="result">
+                Your AI-generated content will appear here.
+            </div>
+
+        </div>
+
+<div class="card business-ideas-card">
+
+    <h2>💡 Business Ideas</h2>
+
+    <p>
+        Get simple business ideas based on your budget and interests.
+    </p>
+
+    <label for="budget">
+        What is your budget?
+    </label>
+
+    <input
+        type="text"
+        id="budget"
+        placeholder="e.g. KSh 20,000"
+    >
+
+    <label for="interest">
+        What type of business interests you?
+    </label>
+
+    <input
+        type="text"
+        id="interest"
+        placeholder="e.g. food, fashion, beauty"
+    >
+
+    <button onclick="generateBusinessIdeas()">
+        💡 Get Business Ideas
+    </button>
+
+    <div id="businessIdeasResult">
+        Your business ideas will appear here.
+    </div>
+
+</div>
+        <section class="features">
+
+            <h2>What BizGenius AI Can Do</h2>
+
+            <div class="feature-grid">
+
+                <div class="feature">
+                    <h3>📢 Marketing</h3>
+                    <p>Create attractive advertisements for your business.</p>
+                </div>
+
+                <div class="feature">
+                    <h3>💬 WhatsApp</h3>
+                    <p>Create professional messages for your customers.</p>
+                </div>
+
+                <div class="feature">
+                    <h3>📱 Social Media</h3>
+                    <p>Create engaging captions for your social pages.</p>
+                </div>
+
+                <div class="feature">
+                    <h3>📝 Product Descriptions</h3>
+                    <p>Describe your products in a professional way.</p>
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <footer>
+
+        <p>© 2026 BizGenius AI</p>
+
+        <p>Smart tools for smarter businesses 🚀</p>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
