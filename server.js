@@ -28,18 +28,22 @@ app.post("/generate", (req, res) => {
   let message = "";
 
   switch (contentType) {
-    case "advertisement":
-      message = `🔥 SPECIAL OFFER! 🔥
+    if (contentType === "advertisement") {
+    message = `👜✨ ${business.toUpperCase()} — STYLE YOU'LL LOVE! ✨👜
 
-Looking for quality ${biz}?
+Looking for quality ${business} at an affordable price?
 
-Get the best ${biz} at affordable prices.
-✨ Quality products
-💰 Affordable prices
-📍 Available in Kenya
+We've got you covered! ❤️
 
-Order today and enjoy great service!`;
-      break;
+✅ Quality products
+✅ Stylish and attractive designs
+✅ Affordable prices
+✅ Great customer service
+
+📲 Order yours today and give your style an upgrade!
+
+🔥 Don't miss out — shop with us today! 🔥`;
+}
 
     case "whatsapp":
       message = `Hello 👋
