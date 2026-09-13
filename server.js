@@ -43,7 +43,7 @@ We've got you covered! ❤️
 📲 Order yours today and give your style an upgrade!
 
 🔥 Don't miss out — shop with us today! 🔥`;
-}
+      break;
 
     case "whatsapp":
       message = `Hello 👋
