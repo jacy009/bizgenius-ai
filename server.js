@@ -28,7 +28,7 @@ app.post("/generate", (req, res) => {
   let message = "";
 
   switch (contentType) {
-    if (contentType === "advertisement") {
+    case "advertisement":
     message = `👜✨ ${business.toUpperCase()} — STYLE YOU'LL LOVE! ✨👜
 
 Looking for quality ${business} at an affordable price?
