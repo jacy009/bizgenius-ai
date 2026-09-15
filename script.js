@@ -226,11 +226,24 @@ function saveContent() {
 }
 
 function showSavedContent() {
-    const saved = JSON.parse(
+    let saved = JSON.parse(
         localStorage.getItem("bizGeniusSavedContent")
     ) || [];
 
     const savedArea = document.getElementById("savedContent");
+
+    // Convert old single-content format into the new array format
+    if (!Array.isArray(saved)) {
+        saved = [{
+            content: saved,
+            date: "Previously saved"
+        }];
+
+        localStorage.setItem(
+            "bizGeniusSavedContent",
+            JSON.stringify(saved)
+        );
+    }
 
     if (saved.length === 0) {
         savedArea.innerHTML = "<p>No saved content yet.</p>";
@@ -239,6 +252,7 @@ function showSavedContent() {
 
     savedArea.innerHTML = `
         <h3>💾 Saved Content</h3>
+
         ${saved.map((item, index) => `
             <div class="saved-item">
                 <p><strong>Saved ${index + 1}</strong></p>
