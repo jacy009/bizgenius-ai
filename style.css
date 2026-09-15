@@ -169,3 +169,21 @@ footer p {
         grid-template-columns: 1fr;
     }
 }
+#copyButton,
+#downloadButton {
+    margin-top: 10px;
+    margin-right: 8px;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+#copyButton:hover,
+#downloadButton:hover {
+    transform: translateY(-2px);
+    opacity: 0.9;
+}
