@@ -211,3 +211,16 @@ function saveContent() {
 
     alert("✅ Content saved!");
 }
+function showSavedContent() {
+    const saved = localStorage.getItem("bizGeniusSavedContent");
+    const savedArea = document.getElementById("savedContent");
+
+    if (saved) {
+        savedArea.innerHTML = `
+            <h3>💾 Saved Content</h3>
+            <p>${saved.replace(/\n/g, "<br>")}</p>
+        `;
+    } else {
+        savedArea.innerHTML = "<p>No saved content yet.</p>";
+    }
+}
