@@ -224,3 +224,4 @@ function showSavedContent() {
         savedArea.innerHTML = "<p>No saved content yet.</p>";
     }
 }
+showSavedContent();
