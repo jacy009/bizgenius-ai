@@ -203,3 +203,11 @@ function downloadContent() {
 
     URL.revokeObjectURL(link.href);
 }
+function saveContent() {
+    const result = document.getElementById("result");
+    const content = result.innerText;
+
+    localStorage.setItem("bizGeniusSavedContent", content);
+
+    alert("✅ Content saved!");
+}
