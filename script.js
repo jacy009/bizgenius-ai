@@ -25,7 +25,7 @@ async function generateContent() {
         const data = await response.json();
 
         result.innerHTML = data.message;
-
+document.getElementById("copyButton").style.display = "block";
     } catch (error) {
         result.innerHTML =
             "❌ Could not connect to BizGenius AI server.";
