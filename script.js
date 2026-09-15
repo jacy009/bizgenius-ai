@@ -26,7 +26,9 @@ async function generateContent() {
 
         result.innerHTML = data.message;
 document.getElementById("copyButton").style.display = "block";
-  document.getElementById("downloadButton").style.display = "block";  } catch (error) {
+  document.getElementById("downloadButton").style.display = "block";
+        document.getElementById("saveButton").style.display = "block";
+    } catch (error) {
         result.innerHTML =
             "❌ Could not connect to BizGenius AI server.";
         console.error(error);
