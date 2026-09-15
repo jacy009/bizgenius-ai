@@ -207,10 +207,24 @@ function saveContent() {
     const result = document.getElementById("result");
     const content = result.innerText;
 
-    localStorage.setItem("bizGeniusSavedContent", content);
+    let savedContent =
+        JSON.parse(localStorage.getItem("bizGeniusSavedContent")) || [];
+
+    savedContent.push({
+        content: content,
+        date: new Date().toLocaleString()
+    });
+
+    localStorage.setItem(
+        "bizGeniusSavedContent",
+        JSON.stringify(savedContent)
+    );
 
     alert("✅ Content saved!");
+
+    showSavedContent();
 }
+
 function showSavedContent() {
     const saved = localStorage.getItem("bizGeniusSavedContent");
     const savedArea = document.getElementById("savedContent");
