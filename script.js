@@ -187,3 +187,17 @@ function copyContent() {
 
     alert("✅ Content copied!");
 }
+function downloadContent() {
+    const result = document.getElementById("result");
+    const content = result.innerText;
+
+    const file = new Blob([content], { type: "text/plain" });
+    const link = document.createElement("a");
+
+    link.href = URL.createObjectURL(file);
+    link.download = "BizGenius-Content.txt";
+
+    link.click();
+
+    URL.revokeObjectURL(link.href);
+}
