@@ -171,3 +171,12 @@ function generateBusinessIdeas() {
         </p>
     `;
 }
+function selectFeature(contentType) {
+    document.getElementById("contentType").value = contentType;
+
+    document.getElementById("business").focus();
+
+    document.querySelector(".card").scrollIntoView({
+        behavior: "smooth"
+    });
+}
