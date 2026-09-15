@@ -226,16 +226,26 @@ function saveContent() {
 }
 
 function showSavedContent() {
-    const saved = localStorage.getItem("bizGeniusSavedContent");
+    const saved = JSON.parse(
+        localStorage.getItem("bizGeniusSavedContent")
+    ) || [];
+
     const savedArea = document.getElementById("savedContent");
 
-    if (saved) {
-        savedArea.innerHTML = `
-            <h3>💾 Saved Content</h3>
-            <p>${saved.replace(/\n/g, "<br>")}</p>
-        `;
-    } else {
+    if (saved.length === 0) {
         savedArea.innerHTML = "<p>No saved content yet.</p>";
+        return;
     }
+
+    savedArea.innerHTML = `
+        <h3>💾 Saved Content</h3>
+        ${saved.map((item, index) => `
+            <div class="saved-item">
+                <p><strong>Saved ${index + 1}</strong></p>
+                <small>${item.date}</small>
+                <p>${item.content.replace(/\n/g, "<br>")}</p>
+            </div>
+        `).join("")}
+    `;
 }
 showSavedContent();
