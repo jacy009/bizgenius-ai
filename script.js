@@ -180,3 +180,10 @@ function selectFeature(contentType) {
         behavior: "smooth"
     });
 }
+function copyContent() {
+    const result = document.getElementById("result");
+
+    navigator.clipboard.writeText(result.innerText);
+
+    alert("✅ Content copied!");
+}
